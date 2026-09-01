@@ -1,4 +1,4 @@
-// cmd_genicon — генерирует icon.png и icon.ico приложения shortTxt.
+// cmd_genicon — генерирует icon.png и icon.ico приложения qTexter.
 // Временная утилита: запускается вручную, результат хранится в репозитории.
 package main
 

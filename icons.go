@@ -8,7 +8,7 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/theme"
 
-	"shorttxt/win"
+	"qtexter/win"
 )
 
 // builtinIcons — контурные пиктограммы (белым по цветной подложке),

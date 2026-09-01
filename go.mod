@@ -1,4 +1,4 @@
-module shorttxt
+module qtexter
 
 go 1.26.5
 

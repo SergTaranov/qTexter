@@ -19,11 +19,11 @@ import (
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 
-	"shorttxt/win"
+	"qtexter/win"
 )
 
 const (
-	windowTitle         = "shortTxt3"
+	windowTitle         = "qTexter"
 	defaultWindowHeight = 460
 )
 
@@ -130,7 +130,7 @@ func logPanic(where string) {
 		if exe, err := os.Executable(); err == nil {
 			dir = filepath.Dir(exe)
 		}
-		f, err := os.OpenFile(filepath.Join(dir, "shorttxt_panic.log"),
+		f, err := os.OpenFile(filepath.Join(dir, "qtexter_panic.log"),
 			os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o644)
 		if err == nil {
 			f.WriteString(msg)

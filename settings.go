@@ -18,7 +18,7 @@ type appSettings struct {
 var settingsPathOverride string
 
 // SettingsPath возвращает путь к settings.json: рядом с exe, а если
-// каталог не доступен на запись — в %APPDATA%\shortTxt3.
+// каталог не доступен на запись — в %APPDATA%\qTexter.
 func SettingsPath() string {
 	if settingsPathOverride != "" {
 		return settingsPathOverride
@@ -33,7 +33,7 @@ func SettingsPath() string {
 	if err != nil {
 		return "settings.json"
 	}
-	return filepath.Join(cfg, "shortTxt3", "settings.json")
+	return filepath.Join(cfg, "qTexter", "settings.json")
 }
 
 // LoadSettings читает settings.json; при отсутствии или повреждении

@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/sys/windows/registry"
 
-	"shorttxt/win"
+	"qtexter/win"
 )
 
 // PlaceholderText подставляется в URL и аргументы запуска
@@ -56,7 +56,7 @@ type AppTarget struct {
 var configPathOverride string
 
 // ConfigPath возвращает путь к apps.json: рядом с exe, а если каталог
-// не доступен на запись — в %APPDATA%\shortTxt.
+// не доступен на запись — в %APPDATA%\qTexter.
 func ConfigPath() string {
 	if configPathOverride != "" {
 		return configPathOverride
@@ -71,11 +71,11 @@ func ConfigPath() string {
 	if err != nil {
 		return "apps.json"
 	}
-	return filepath.Join(cfg, "shortTxt", "apps.json")
+	return filepath.Join(cfg, "qTexter", "apps.json")
 }
 
 func isWritableDir(dir string) bool {
-	f, err := os.CreateTemp(dir, ".shorttxt-*")
+	f, err := os.CreateTemp(dir, ".qtexter-*")
 	if err != nil {
 		return false
 	}
